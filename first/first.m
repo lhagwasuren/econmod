@@ -1,6 +1,6 @@
 % add IRIS to the path
 % addpath /home/sugarkhuu/Documents/IRIS-Toolbox-Release-20200119
-%%
+%% edited from github
 addpath /home/sugarkhuu/Documents/IRIS-Toolbox-Release-20180319
 
 % configure IRIS
