@@ -1,5 +1,5 @@
 % Creates two perl scripts to help us replace contents of certain files
-
+%% testing
 %% create perl script to remove latex preamble
 fid = fopen('./tools/strip_header.pl','w');
 fprintf(fid,'my $fin = $ARGV[0];\n');
@@ -42,3 +42,4 @@ fprintf(fid,'}\n');
 fprintf(fid,'close(FDOUT);\n');
 fprintf(fid,'close(FDIN);\n');
 fclose(fid);
+%%
