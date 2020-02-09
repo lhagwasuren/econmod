@@ -1,4 +1,4 @@
-%% Preliminary
+%% Preliminary session
 
 % add IRIS to the path
 % addpath /home/sugarkhuu/Documents/IRIS-Toolbox-Release-20200119
