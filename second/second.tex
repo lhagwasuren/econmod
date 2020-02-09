@@ -1,0 +1,40 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{graphicx}
+\usepackage[outdir=./]{epstopdf}
+
+\input{../results/texs/second_text.tex}
+
+
+\begin{document}
+Hello World!
+\begin{table}[!ht]
+  \caption{Forecast in numbers}
+  \begin{center}
+      \input{@resultSource@/results/tables/myTable}
+  \end{center}
+\end{table}
+
+\begin{figure}[!ht]
+  \caption{Forecast of x in figure}
+  \begin{center}
+  	  \includegraphics[height=0.55\textwidth]{@resultSource@/results/figures/my_x.eps}
+  \end{center}
+\end{figure}
+ 
+\newpage
+\setlength\parskip{1.8mm}
+
+% Body Text starts
+\bodytext
+
+\begin{figure}[!ht]
+  \caption{Forecast of x in figure}
+  \begin{center}
+  	  \includegraphics[height=0.55\textwidth]{@resultSource@/results/figures/my_e.eps}
+  \end{center}
+\end{figure}
+
+{\bf Done by: \doneby}
+
+\end{document}
+

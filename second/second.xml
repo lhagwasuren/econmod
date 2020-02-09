@@ -1,0 +1,39 @@
+<!DOCTYPE alltext SYSTEM "second.dtd">
+
+<alltext>
+    
+    <intro>
+        <introl>
+          <number>i</number>
+             <par>Although Matlab is not free, it is 800 eur per year.\ldots</par>
+        </introl>
+        <intror>
+          <number>afn_usd</number>
+             <par>\ldots which universities could afford without much effort.</par>
+        </intror>
+    </intro>
+
+    <bodytext>
+    <apar>MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages.</apar>
+    <par>Although MATLAB is intended primarily for numerical computing, an optional toolbox uses the MuPAD symbolic engine allowing access to symbolic computing abilities. An additional package, Simulink, adds graphical multi-domain simulation and model-based design for dynamic and embedded systems.</par>
+    <par>Variables are defined using the assignment operator, =. MATLAB is a weakly typed programming language because types are implicitly converted.</par>
+    <apar p="secondary">As of 2018, MATLAB has more than 3 million users worldwide.[16] MATLAB users come from various backgrounds of engineering, science, and economics.</apar>
+    <par p="secondary">The MATLAB application is built around the MATLAB programming language. Common usage of the MATLAB application involves using the "Command Window" as an interactive mathematical shell or executing text files containing MATLAB code.</par>
+    </bodytext>
+
+    <infolist>
+        <info>
+          <idtag>ForecastDate</idtag>
+          <par>February 2020</par>
+        </info>
+        <info>
+          <idtag>CountryName</idtag>
+          <par>Mongolia</par>
+        </info>
+        <info>
+          <idtag>doneby</idtag>
+          <par>Sugarkhuu Radnaa, Light Brown</par>
+        </info>
+    </infolist>
+   
+</alltext>

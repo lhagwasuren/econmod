@@ -1,0 +1,13 @@
+<!ELEMENT alltext (intro, bodytext, infolist)>
+<!ELEMENT intro (introl, intror)>
+<!ELEMENT introl (number, par)>
+<!ELEMENT intror (number, par)>
+<!ELEMENT bodytext (apar+,par+)>
+<!ELEMENT apar (#PCDATA | footnote)*>
+<!ELEMENT par (#PCDATA | footnote)*>
+<!ELEMENT footnote (#PCDATA)*>
+<!ELEMENT infolist (info*)>
+<!ELEMENT info (idtag,par)>
+<!ELEMENT idtag (#PCDATA)*>
+<!ATTLIST apar p CDATA "all">
+<!ATTLIST par p CDATA "all">
