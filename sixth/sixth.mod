@@ -113,6 +113,30 @@ l_cpi_f = 100*log(cpi_f);
 l_cpi_xf = 100*log(cpi_xf);
 
 
+'III. Taylor rule or Monetary policy'
+
+i = c_i*i{-1}  + (1-c_i)*(i_tnd + c2_i*dev_cpi + c3_i*l_y_gap) + shock_i;
+
+i_tnd = r_tnd + dl_cpi_tar;
+dev_cpi = dl_cpi{+1} - e_dl_cpi_tar;
+
+
+'IV. UIP condition'
+
+l_mnt_usd = e_l_mnt_usd - (i - i_us - prem)/4 + shock_l_mnt_usd;
+
+
+r = i - d4l_cpi{+4};
+r = r_tnd + r_gap;
+
+r_tnd = r_us_tnd + dl_z_tnd + prem + shock_r_tnd; % real UIP
+
+l_z = l_mnt_usd - l_cpi + l_cpi_f;
+l_z = l_z_tnd + l_z_gap;
+
+dl_z_tnd = 4*(l_z_tnd - l_z_tnd{-1}) + shock_dl_z_tnd;
+dl_z_tnd = c1_dl_z_tnd*dl_z_tnd{-1} + (1-c1_dl_z_tnd)*ss_dl_z_tnd;
+
 
 %rmc_xf = l_y_gap + l_z_gap;
 %           + dl_oil_im_f 
@@ -129,7 +153,3 @@ obs_y = y;
 obs_cpi    = cpi;
 obs_cpi_f  = cpi_f;
 obs_cpi_xf = cpi_xf;
-
-
-'III. Taylor rule or Monetary policy'
-'IV. UIP condition'
