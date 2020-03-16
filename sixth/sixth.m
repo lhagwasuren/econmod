@@ -9,10 +9,10 @@ irisstartup
 
 disp('Forecast starts ...');
 p   = struct();
-fifth_param;
+sixth_param;
 
 
-m = model('fifth.mod','linear',true,'assign',p);
+m = model('sixth.mod','linear',true,'assign',p);
 m = solve(m);
 m = sstate(m);
 
