@@ -1,7 +1,7 @@
 %% Preliminary
 
 % add IRIS to the path
-cd /home/sugarkhuu/Documents/Documents/my/modelling/econmod/fifth
+cd /home/sugarkhuu/Documents/Documents/my/modelling/econmod/sixth
 addpath /home/sugarkhuu/Documents/IRIS-Toolbox-Release-20180319
 
 % configure IRIS
@@ -14,7 +14,7 @@ sixth_param;
 
 m = model('sixth.mod','linear',true,'assign',p);
 m = solve(m);
-m = sstate(m);
+ms = sstate(m);
 
 
 d=struct();
@@ -36,17 +36,18 @@ cpi_data = [100	100	100
 102.408156908953	97.9635639640592	104.312982456765
 103.007698426008	100.81471876577	103.947546851825
 103.211177534037	102.44253091977	103.54059751158
-102.858583074028	102.742431439906	102.908362345795
-108.458370839468	106.184341138713	109.432954996934];
+nan	102.742431439906	102.908362345795
+108.458370839468	106.184341138713	nan];
 
 d.obs_cpi    = tseries();
 d.obs_cpi_f  = tseries();
 d.obs_cpi_xf = tseries();
+d.obs_dl_cpi_foreign = tseries();
 
 d.obs_cpi(qq(2018,1):qq(2019,4))    = cpi_data(:,1);
 d.obs_cpi_f(qq(2018,1):qq(2019,4))  = cpi_data(:,2);
 d.obs_cpi_xf(qq(2018,1):qq(2019,4)) = cpi_data(:,3);
-
+d.obs_dl_cpi_foreign(qq(2018,1):qq(2019,4)) = NaN;
 
 [~, f, v, ~, pe, co] = filter(m, d, qq(2018,1):qq(2019,4)+40);
 a=f.mean;

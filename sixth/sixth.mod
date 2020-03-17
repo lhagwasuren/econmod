@@ -177,8 +177,8 @@ e_dl_cpi_f  = dl_cpi_f{+1};
 e_dl_cpi_xf = dl_cpi_xf{+1};
 
 
-rmc_f = (1-c1_rmc_f)*l_y_gap + c1_rmc_f*(l_z_gap + l_rp_gap);
-rmc_xf = (1-c1_rmc_xf)*l_y_gap + c1_rmc_xf*(l_z_gap + l_rp_gap);
+rmc_f = (1-c1_rmc_f)*l_y_gap + c1_rmc_f*(l_z_gap - (1-c_lw_f)*l_rp_gap);
+rmc_xf = (1-c1_rmc_xf)*l_y_gap + c1_rmc_xf*(l_z_gap + c_lw_f*l_rp_gap);
 
 % F/XF Relative prices
 l_rp = l_cpi_f - l_cpi_xf;
